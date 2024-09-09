@@ -516,7 +516,7 @@ footer {
 
 .fitur-list li {
     position: relative; /* Posisi relatif untuk menempatkan tanda centang */
-    padding-left: 30px; /* Ruang untuk tanda centang di sebelah kiri teks */
+    padding-right: 30px; /* Ruang untuk tanda centang di sebelah kanan teks */
     margin-bottom: 10px; /* Jarak antara item */
     font-size: 16px; /* Ukuran font untuk teks */
 }
@@ -524,7 +524,7 @@ footer {
 /* Gaya untuk tanda centang */
 .checkmark {
     position: absolute; /* Posisi absolut untuk menempatkan tanda centang */
-    left: 0; /* Jarak dari sisi kiri list item */
+    right: 0; /* Jarak dari sisi kanan list item */
     top: 50%; /* Posisi vertikal di tengah item */
     width: 20px; /* Lebar tanda centang */
     height: 20px; /* Tinggi tanda centang */
@@ -541,7 +541,7 @@ footer {
 
     .fitur-list li {
         font-size: 14px; /* Menurunkan ukuran font untuk perangkat mobile */
-        padding-left: 25px; /* Mengurangi padding kiri untuk tanda centang */
+        padding-right: 25px; /* Mengurangi padding kanan untuk tanda centang */
     }
 
     .checkmark {
@@ -557,7 +557,7 @@ footer {
 
     .fitur-list li {
         font-size: 12px; /* Menurunkan ukuran font lebih lanjut untuk perangkat kecil */
-        padding-left: 20px; /* Mengurangi padding kiri lebih lanjut */
+        padding-right: 20px; /* Mengurangi padding kanan lebih lanjut */
     }
 
     .checkmark {
@@ -565,4 +565,3 @@ footer {
         height: 16px; /* Menurunkan ukuran tanda centang */
     }
 }
-
