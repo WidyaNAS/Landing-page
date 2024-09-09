@@ -508,3 +508,61 @@ footer {
     }
 }
 
+/* Gaya untuk list fitur */
+.fitur-list {
+    list-style: none; /* Menghilangkan bullet default dari list */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.fitur-list li {
+    position: relative; /* Posisi relatif untuk menempatkan tanda centang */
+    padding-left: 30px; /* Ruang untuk tanda centang di sebelah kiri teks */
+    margin-bottom: 10px; /* Jarak antara item */
+    font-size: 16px; /* Ukuran font untuk teks */
+}
+
+/* Gaya untuk tanda centang */
+.checkmark {
+    position: absolute; /* Posisi absolut untuk menempatkan tanda centang */
+    left: 0; /* Jarak dari sisi kiri list item */
+    top: 50%; /* Posisi vertikal di tengah item */
+    width: 20px; /* Lebar tanda centang */
+    height: 20px; /* Tinggi tanda centang */
+    background-color: #003366; /* Warna biru tua */
+    clip-path: polygon(0 0, 20% 80%, 50% 30%, 80% 70%, 100% 0); /* Bentuk tanda centang */
+    transform: translateY(-50%); /* Memindahkan tanda centang ke tengah secara vertikal */
+}
+
+/* Media Queries untuk perangkat mobile */
+@media (max-width: 768px) {
+    .fitur-list {
+        padding: 0 10px; /* Menambahkan padding horizontal pada daftar */
+    }
+
+    .fitur-list li {
+        font-size: 14px; /* Menurunkan ukuran font untuk perangkat mobile */
+        padding-left: 25px; /* Mengurangi padding kiri untuk tanda centang */
+    }
+
+    .checkmark {
+        width: 18px; /* Menurunkan ukuran tanda centang */
+        height: 18px; /* Menurunkan ukuran tanda centang */
+    }
+}
+
+@media (max-width: 480px) {
+    .fitur-list {
+        padding: 0 5px; /* Menambahkan padding horizontal lebih kecil pada daftar */
+    }
+
+    .fitur-list li {
+        font-size: 12px; /* Menurunkan ukuran font lebih lanjut untuk perangkat kecil */
+        padding-left: 20px; /* Mengurangi padding kiri lebih lanjut */
+    }
+
+    .checkmark {
+        width: 16px; /* Menurunkan ukuran tanda centang */
+        height: 16px; /* Menurunkan ukuran tanda centang */
+    }
+}
+
