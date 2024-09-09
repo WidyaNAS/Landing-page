@@ -1,0 +1,491 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e0f7fa; /* Light Cyan Background */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #0288d1; /* Light Blue */
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section  */
+.hero-section {
+    background-image: url('plafon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height untuk layar besar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay untuk menambah kontras */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px; /* Batasi lebar konten agar tidak terlalu lebar */
+    padding: 20px;
+    z-index: 1; /* Pastikan konten ada di atas overlay */
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #007bff; /* Warna tombol */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.produk-section {
+    padding: 20px 0; /* Menambahkan padding atas dan bawah untuk ruang */
+}
+.produk-heading {
+    text-align: center; /* Menempatkan teks di tengah */
+    font-size: 2em; /* Ukuran font lebih besar */
+    margin-bottom: 20px; /* Jarak bawah heading */
+    color: #333; /* Warna teks, bisa disesuaikan */
+}
+/* Gaya untuk gambar produk */
+.produk-heading {
+    text-align: center; /* Menempatkan teks di tengah */
+    font-size: 2em; /* Ukuran font lebih besar */
+    margin-bottom: 20px; /* Jarak bawah heading */
+}
+.produk-item img.thumbnail {
+    width: 100%; /* Gambar akan mengambil lebar penuh kontainer */
+    max-width: 300px; /* Lebar maksimum gambar produk */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block; /* Menghilangkan jarak bawah default dari gambar inline */
+    margin: 0 auto; /* Mengatur gambar di tengah kontainer */
+}
+
+/* Gaya untuk kontainer produk */
+.produk-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak antar item produk */
+    justify-content: center; /* Mengatur item produk di tengah */
+}
+
+.produk-item {
+    text-align: center; /* Mengatur teks di tengah item produk */
+    width: 100%;
+    max-width: 350px; /* Lebar maksimum item produk */
+}
+
+/* Media query untuk perangkat seluler */
+@media screen and (max-width: 600px) {
+    .produk-item {
+        width: 100%; /* Lebar item produk penuh pada perangkat kecil */
+        max-width: 100%; /* Lebar maksimum item produk penuh pada perangkat kecil */
+    }
+}
+
+
+/* Gaya untuk modal */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1; /* Di atas elemen lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Aktifkan scroll jika diperlukan */
+    background-color: rgba(0,0,0,0.8); /* Latar belakang hitam dengan transparansi */
+}
+
+/* Gaya konten modal */
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    width: 90%; /* Lebar modal 90% dari layar */
+    max-width: 700px; /* Lebar maksimum */
+}
+
+.modal-content img {
+    width: 100%; /* Gambar menyesuaikan lebar modal */
+    height: auto;
+}
+
+/* Gaya tombol close */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media query untuk perangkat seluler */
+@media screen and (max-width: 600px) {
+    .close {
+        font-size: 30px; /* Ukuran font tombol close di perangkat kecil */
+        top: 5px;
+        right: 10px;
+    }
+
+    .modal-content {
+        width: 95%; /* Lebar modal lebih besar di perangkat kecil */
+        margin: 10% auto; /* Margins lebih kecil di perangkat kecil */
+    }
+}
+
+/* Fitur Section */
+.fitur-section {
+    padding: 50px 0;
+    background-color: #b3e5fc; /* Lighter Blue */
+    text-align: center;
+}
+
+.fitur-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #01579b; /* Dark Blue */
+}
+
+/* Testimoni Section */
+.testimoni-section {
+    padding: 50px 0;
+    background-color: #e1f5fe; /* Very Light Blue */
+    text-align: center;
+}
+
+.testimoni-list blockquote {
+    font-style: italic;
+    background-color: #e0f7fa; /* Light Cyan */
+    padding: 20px;
+    margin: 20px auto;
+    border-left: 5px solid #29b6f6; /* Sky Blue */
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center; /* Pusatkan teks */
+    color: #00008B; /* Warna Dark Blue (opsional) */
+    margin-top: 20px; /* Beri jarak di bagian atas (opsional) */
+}
+
+/* Styling dasar untuk form pemesanan */
+.order-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-container h2 {
+    text-align: center;
+    color: #00008B; /* Dark Blue */
+    margin-bottom: 20px;
+}
+
+
+.order-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.order-form-container input[type="text"],
+.order-form-container input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.order-form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #00008B; /* Dark Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.order-form-container button:hover {
+    background-color: #4fc3f7; /* Lighter Blue */
+}
+/* Hubungi Kami Section */
+.hubungi-section {
+    padding: 50px 0;
+    background-color: #4fc3f7; /* Light Blue */
+    color: #fff;
+    text-align: center;
+}
+
+.hubungi-section a {
+    color: #0288d1; /* Deeper Blue */
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #0288d1; /* Deeper Blue */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .produk-list {
+        flex-direction: column;
+    }
+
+    .produk-item {
+        margin-bottom: 20px;
+    }
+
+    .fitur-list {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+    }
+
+    .produk-list {
+        display: block;
+    }
+
+    .produk-item {
+        margin-bottom: 30px;
+    }
+
+    .fitur-list li {
+        font-size: 1rem;
+    }
+
+    .testimoni-list blockquote {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .produk-list {
+        display: block;
+    }
+
+    .produk-item img {
+        width: 100%;
+    }
+
+    .fitur-list {
+        font-size: 0.9rem;
+    }
+
+    .testimoni-list blockquote {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .hubungi-section p {
+        font-size: 0.9rem;
+    }
+
+    .hubungi-section a {
+        font-size: 0.9rem;
+    }
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #4fc3f7; /* Warna background marquee (biru muda) */
+    padding: 10px 0;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite; /* Durasi berjalan */
+}
+
+.marquee p {
+    font-size: 1.5rem;
+    color: #00008B; /* Warna kuning untuk teks berjalan */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Animasi Marquee */
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .marquee p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee p {
+        font-size: 1rem;
+    }
+}
+/* Media queries untuk responsivitas */
+@media screen and (max-width: 768px) {
+    /* Ukuran tablet */
+    .order-form-container {
+        padding: 15px;
+    }
+
+    .order-form-container h2 {
+        font-size: 24px;
+    }
+
+    .order-form-container input[type="text"],
+    .order-form-container input[type="tel"] {
+        font-size: 14px;
+    }
+
+    .order-form-container button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ukuran smartphone */
+    .order-form-container {
+        padding: 10px;
+    }
+
+    .order-form-container h2 {
+        font-size: 20px;
+    }
+
+    .order-form-container input[type="text"],
+    .order-form-container input[type="tel"] {
+        font-size: 12px;
+    }
+
+    .order-form-container button {
+        font-size: 14px;
+    }
+}
+

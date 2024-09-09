@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Plafon PVC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Karya Plafon PVC</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#hubungi">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+   
+<section class="hero-section" id="home">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h2>Plafon PVC Terbaik untuk Rumah Anda</h2>
+            <p>Tampilan elegan, mudah dipasang, dan tahan lama. Pilihan terbaik untuk hunian Anda.</p>
+            <a href="#produk" class="cta-btn">Lihat Produk</a>
+        </div>
+    </div>
+</section>
+
+ <div class="marquee-container">
+        <div class="marquee">
+            <p>PLAFON PVC | PLAFON GYPSUM | PLAFON GRC KALSI | ATAP BAJA RINGAN | SEDIA BAHAN DAN MELAYANI PEMASANGAN</p>
+        </div>
+    </div>
+
+  
+     <!-- Produk Section -->
+    <section class="produk-section" id="produk">
+        <div class="container">
+            <h2 class="produk-heading">Produk Unggulan</h2>
+            <div class="produk-list">
+                <div class="produk-item">
+                    <img src="produk1.jpg" alt="Plafon PVC Modern" class="thumbnail" onclick="openModal('produk1.jpg')">
+                    <h3>Plafon PVC Classic</h3>
+                    <p>Desain klasik yang elegan dengan daya tahan tinggi.</p>
+                </div>
+                <div class="produk-item">
+                    <img src="produk2.jpg" alt="Plafon Gypsum" class="thumbnail" onclick="openModal('produk2.jpg')">
+                    <h3>Plafon PVC Modern</h3>
+                    <p>Tampilan modern yang cocok untuk rumah minimalis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Fitur Section -->
+    <section class="fitur-section" id="fitur">
+        <div class="container">
+            <h2>Kenapa Pilih Plafon PVC?</h2>
+            <ul class="fitur-list">
+                <li>Tahan air dan anti bocor</li>
+                <li>Mudah dibersihkan</li>
+                <li>Ringan dan mudah dipasang</li>
+                <li>Tersedia dalam berbagai desain menarik</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section class="testimoni-section" id="testimoni">
+        <div class="container">
+            <h2>Apa Kata Pelanggan Kami</h2>
+            <div class="testimoni-list">
+                <blockquote>"Plafon PVC ini sangat mudah dipasang dan tampilannya sangat elegan. Sangat puas!" - Budi</blockquote>
+                <blockquote>"Hasilnya sangat bagus, dan kualitasnya sesuai dengan harapan. Sangat direkomendasikan!" - Ani</blockquote>
+            </div>
+        </div>
+    </section>
+<h1>Form Pemesanan</h1>
+
+    <!-- Form Pemesanan -->
+    <div class="order-form-container">
+        <h2>Pesan Sekarang via WhatsApp</h2>
+        <form id="order-form" onsubmit="redirectToWhatsApp(); return false;">
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Nomor Telepon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </div>
+
+    <script>
+        function redirectToWhatsApp() {
+            // Ambil nilai dari form
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            
+            // Nomor WhatsApp tujuan (ganti dengan nomor Anda)
+            var whatsappNumber = '6289666898980'; // ganti dengan nomor WA yang dituju
+            
+            // Buat pesan yang akan dikirim
+            var message = 'Halo, saya ' + name + '. Saya ingin konsultasi mengenai pemasangan plafon.';
+            
+            // Buat URL wa.me
+            var whatsappURL = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+            
+            // Alihkan ke WhatsApp
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+    <!-- Hubungi Kami Section -->
+    <section class="hubungi-section" id="hubungi">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p>Untuk informasi lebih lanjut atau penawaran khusus, silakan hubungi kami melalui WhatsApp di <a href="tel:+6289666898980">+62 89 666 8989 80</a>.</p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Anugerah Enggal Karya. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
